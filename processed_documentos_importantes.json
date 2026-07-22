@@ -1,1 +1,262 @@
-{"processed_file_ids": [], "requiere_revision": []}
+{
+  "processed_file_ids": [
+    "1-2oWVXOuNRZh-bv-5E203aG8t96oYRjz",
+    "14cmDNzzZGH3CIM430whMZxWbUawylssc",
+    "19XPYcM8JHzdUPS3ErcVRoSrW770oP6Gx",
+    "1LtDkAmB70kNI-2L2FTz4a33egGnRPD57",
+    "1NYy9GpymzdFz9eNqL9qnIVpRgD6pTaCy",
+    "1S-BOJs6qc7GszV9lUahGg42k0Oy_AUKO",
+    "1VNm3W9nFUnvdXLdwwtwih02dL0A2_UKB",
+    "1ZBt2WOIvaUijnuTIq3RGkyFqLVz2aU2g",
+    "1bImzLIfsLQHrUr7oeUgoj6MH5l8vRPpX",
+    "1c_bZRQKGWMT63MwioNYHi6YNRb7bGJ_2",
+    "1clySrEbxW5BBlc2Rv99vPgPehnTNz_st",
+    "1d2oIjTPgTpqJrqJjVgRskHCyFKOb_W12",
+    "1d5_JMil1Ui-ibbNTpr-EShnIeQFEp4MA",
+    "1ekbJmW-74nbG3shzJ_VItz9Z7klGapru",
+    "1hBCVKNBkWTepL1H75epw8zBUa-_L60ww",
+    "1kAc68Cpt5tRET5lQOMbIJbI5UJ-l19oM",
+    "1lk1MSTEQSEVV7PaUgZHSFJSA0w_JVBI8",
+    "1p7vCW0RastT4P0RB6XXRkCgjcRSuX8Dd",
+    "1pwctOj129awZa0bQNldft0C0oSzuLgqo",
+    "1sXKa-K3t7hyWt3ucewcJjbsWblMZC6F3",
+    "1wXA0YodjpMgxTiKWEsGlaN80DnHPVczO"
+  ],
+  "requiere_revision": [
+    {
+      "file_id": "1OlO-YQ3saQ1hcEMpvpXDLtVhCoITqU85",
+      "name": "20260000106344257223192.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.0.content.0.pdf.source.base64.data: The PDF specified was not valid.\"},\"request_id\":\"req_011CdHGQVV8z7QXB6MbKJ5xe\"}"
+    },
+    {
+      "file_id": "1b4KJIBee02Efd3rzD1FiVhWo6KjVOAa_",
+      "name": "20260000106344257223185.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.0.content.0.pdf.source.base64.data: The PDF specified was not valid.\"},\"request_id\":\"req_011CdHGQbL7jgEEAEcEr8XmZ\"}"
+    },
+    {
+      "file_id": "1MwIOOyiOyYmd1D1yHV3lhAzTxcyNZ9z6",
+      "name": "documento.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.0.content.0.pdf.source.base64.data: The PDF specified was not valid.\"},\"request_id\":\"req_011CdHGR5vaGhx4CU7BZ1nZr\"}"
+    },
+    {
+      "file_id": "13aThr0EukOVVWzli-4ikuwBkHT8LSPfl",
+      "name": "20260000106344257222790.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.0.content.0.pdf.source.base64.data: The PDF specified was not valid.\"},\"request_id\":\"req_011CdHGRc632jSCmCXhrZH6q\"}"
+    },
+    {
+      "file_id": "1vxiKL30lfkwit2CciowP8NQVrvIh5XAq",
+      "name": "20260000106344257223082.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.0.content.0.pdf.source.base64.data: The PDF specified was not valid.\"},\"request_id\":\"req_011CdHGRkV4cTzZ1ZZsEP7om\"}"
+    },
+    {
+      "file_id": "1GVkz3Nnvp2cZVtVuD0J6Ybi46iYjTToc",
+      "name": "20260000106344257222791.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.0.content.0.pdf.source.base64.data: The PDF specified was not valid.\"},\"request_id\":\"req_011CdHGTsNrDqVWRLDv7ZFCD\"}"
+    },
+    {
+      "file_id": "1VhrmzIMlyes5BVugDjRBoIq-Wpna0NJF",
+      "name": "Contrato de Compra Directa.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGZmWo3oDbo9EWtPFus\"}"
+    },
+    {
+      "file_id": "1RKf_kvwv1yVGZCF1CeOP6SGlwr5JTzeQ",
+      "name": "REC_3000.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGZxEU4jup1reddpXNW\"}"
+    },
+    {
+      "file_id": "1FVrt7pKvxKhUCXsDtv2bqKSpTTapeaeZ",
+      "name": "REC_3000 (3).pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGa47gfkyF3oBwparC8\"}"
+    },
+    {
+      "file_id": "1YWtO4QPAqCeSmpcmlChcMcv2Qt4ig_Ky",
+      "name": "180663_Contrato_de_ORTIZ_RODRIGUEZ_MATIAS_LEANDRO_.PDF",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGa9DmTxUG2Gc6Ef7EQ\"}"
+    },
+    {
+      "file_id": "1DmnbaWXrrIUZKwNNzcDO1aGQpcgdagq7",
+      "name": "Información-precontractual-Contrato-Seguro.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGaLBaMKez6MYdj8p1u\"}"
+    },
+    {
+      "file_id": "1Ia9l3w67hLGLE5DpcEcknQF9l6VdjFMt",
+      "name": "Acuerdo_Alojamiento_(2_clientes)_+pago_mensual_SSR_-_parking_-29112023.docx.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGaPksjAhrgcJhPwt8T\"}"
+    },
+    {
+      "file_id": "1ZdXvJOJZw6ehzJ-JxozllqZfyRUdm8ve",
+      "name": "Sentencia divorcio.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGaa7yL2WP8MBuSKL8q\"}"
+    },
+    {
+      "file_id": "1XrhsiQUUBYCRUKbdfpJMKj2tpUnWL8eU",
+      "name": "180668_Recibi_documentacion_contractual.PDF",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbBwkPaUXqoi7Pj9Ri\"}"
+    },
+    {
+      "file_id": "1EvqIqoBgHeNw1xZQ1kU1ZpmTzySKDj84",
+      "name": "D0EEF4.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbK6NPoXbXoBfgMRQV\"}"
+    },
+    {
+      "file_id": "1uA2LO1TOc_zN1YeJbmiYnykq5gL_L4MK",
+      "name": "Resolucion Oficial favorable.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbNymoN9gDwKnB94Mj\"}"
+    },
+    {
+      "file_id": "1aMxUm9oIuto5YMhdI1RFoPoOIykZVZTh",
+      "name": "Justificante cambio domicilio DGT.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbSeY2uHjnYJB7ANMZ\"}"
+    },
+    {
+      "file_id": "1LEDeYf1hj4Y1HziNJKn0q7NrxQn7uvPW",
+      "name": "BBVA_CF.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbZscZ1st5ytD1ffVh\"}"
+    },
+    {
+      "file_id": "12-Trm-d2h7hqnV-AOro5JYclZYtDwdoZ",
+      "name": "SINT_AFTD_0890A11254026212.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbcJDUmmHTkDJLALjo\"}"
+    },
+    {
+      "file_id": "1hGh86GNZJ8jpsPbTrN_aO4qZM4YbCbdN",
+      "name": "JustificanteRegistro.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbexhhki7izdh9F2gt\"}"
+    },
+    {
+      "file_id": "1hJPe0rEm4qiMNWy-9-1REfQF2U1Oeafl",
+      "name": "ContratoINE_202507000343303_20__28072025_112711.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbighChz2xJiMh8SPL\"}"
+    },
+    {
+      "file_id": "1ri1lXct2wZJ2FiboWXMQvTuD84n39EgE",
+      "name": "Numero de Seguridad Social.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbm35boMgokzjufp68\"}"
+    },
+    {
+      "file_id": "1Zoco9C9FwwQVgWhaRVsy34k3G5F9CAXs",
+      "name": "Justificante_280497268280.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbqgNkwEoPwH9ezt53\"}"
+    },
+    {
+      "file_id": "1EfTZakPTp7guSBOzzUa8ZKOi7JYedOev",
+      "name": "AbrirAdjuntoAccion.icm.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGbteinauCrMbQ8xPF8\"}"
+    },
+    {
+      "file_id": "1-1ZUjKBP-951vdD_m4u6B2qL8F343b2W",
+      "name": "JustificantePagoDGT.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGc1SzyRQXmhXB9wq3f\"}"
+    },
+    {
+      "file_id": "1KkiKwodeklX-3gTY-ISbAYQxnW_Vs2ii",
+      "name": "Contrato_de_alojamiento_Be_Casa_San_Sebastián.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGc6ny5PbASHN5iEJog\"}"
+    },
+    {
+      "file_id": "16LCDyVJPLEkbZ99gkMu1p4SUH85k8Rz4",
+      "name": "Propuesta de contratación - Matías Ortiz.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcAtnDz9cZNQggLqUt\"}"
+    },
+    {
+      "file_id": "1Qgs389eGxuENgTpEULfg6Gyc-wwgU-_Z",
+      "name": "Diploma direccion de proyectos PMI I.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcFhzp3kaKr1hWqqH9\"}"
+    },
+    {
+      "file_id": "1Dg0cnxlKv1fVk-563TIERjtc-tuVrkYU",
+      "name": "Empadronamiento Madrid.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcLoah7d7fmRVxHCde\"}"
+    },
+    {
+      "file_id": "1xsl8PvO-xaWRM8Ks4ecCskAUwChczdPX",
+      "name": "Contrato_202507000343303_20__28072025_114504.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcTX9mjA9VG8di9LZv\"}"
+    },
+    {
+      "file_id": "1x0F0HEui2Qx9jtmzZ8DdihVcN2GinOpo",
+      "name": "Partida de nacimiento.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcXYziYtMmhSmDm8co\"}"
+    },
+    {
+      "file_id": "1uwW1kcTqi46RYtPIntASPXqXtJBp52vb",
+      "name": "Aprobación del paro.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGceFpSAbt2dBXmyE8q\"}"
+    },
+    {
+      "file_id": "1ga1AdFRMgYIBhmqr5TFykVEHYVFFySGm",
+      "name": "230855-BETWEEN_TECHNOLOGY_S_L.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcjSMpTHkT4v6r4waN\"}"
+    },
+    {
+      "file_id": "1_HJ5sEAHxqlGD5NqWn5tzORzwykzGLo-",
+      "name": "Contrato Matias Ortiz.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcnfqDs3yydnMrDWmh\"}"
+    },
+    {
+      "file_id": "1MBGljtofBJPZBCslxEtesjeckEisrUwF",
+      "name": "224280-BETWEEN_TECHNOLOGY_S_L.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcqxGpzfekDQUHMEMA\"}"
+    },
+    {
+      "file_id": "1Bive-T7KNM_CIhrthO05wA5uft_pNcZC",
+      "name": "02 ANEXO I - CONDICIONES LABORALES_Matias Ortiz - Signed.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGcuzs5XhFuMSJKiVge\"}"
+    },
+    {
+      "file_id": "1JnffvWPJvdfyZvsg8Ze04NoyGFLpOSI3",
+      "name": "03 ANEXO II_Matias Ortiz - Signed.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGd27iNQxJNaydmrzM4\"}"
+    },
+    {
+      "file_id": "1qAQwmlSgKkvLc2qseC4JdHrJsfADVRZn",
+      "name": "04. AUTORIZACIÓN PARA LA GRABACIÓN DE IMÁGENES_Matias Ortiz - Signed.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGd6sDLdFcGhKCg7CuR\"}"
+    },
+    {
+      "file_id": "1AwZ5CYWnXCV9_3ESFoisOJy_z7_8ipPK",
+      "name": "MOD_145 - Signed.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGeNseyd89WCBHLcY6D\"}"
+    },
+    {
+      "file_id": "1MMQyQ-9kHZx2OsFc-IQxhypwPhQDnI00",
+      "name": "Contrato Matias Ortiz_firmado.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGeW5Vfvwfy3cUwQqHi\"}"
+    },
+    {
+      "file_id": "1yFEu0BV2tp-dYwTcw0U6uI39GUaDKCVS",
+      "name": "02_ANEXO_I_-_CONDICIONES_LABORALES_Matias_Ortiz_-_Signed.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGecZRhTvUBFWwLeHCr\"}"
+    },
+    {
+      "file_id": "1k2oeeZPEayWRmNHW1v1vPBOdbWITOt5v",
+      "name": "03_ANEXO_II_Matias_Ortiz_-_Signed.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGfS5RCoxZophkyi1P6\"}"
+    },
+    {
+      "file_id": "1Z1QNwfeM-47AmW2SNMdBVy2a8cwaJdw8",
+      "name": "04._AUTORIZACIÓN_PARA_LA_GRABACIÓN_DE_IMÁGENES_Matias_Ortiz_-_Signed.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGfW6GfKpTRsY2YT9UU\"}"
+    },
+    {
+      "file_id": "1kqZNTckcQa7lhrOSv3ZtCY0VKHaJ_aEM",
+      "name": "MOD_145_-_Signed.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGfcYTnaH81MyzaYUPL\"}"
+    },
+    {
+      "file_id": "1lGwYtuy8TXodNyeOHdhcVS62jehKClMh",
+      "name": "Certificate of completion - 2026-05-29 - 10:18:24.pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGfgFhh2JD9CEoNhCSw\"}"
+    },
+    {
+      "file_id": "1oV817u-1pUEB1jbOaeVbRgKyFjspCJh3",
+      "name": "Talho - Precontrato (3).pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGfjyCEsPABon2kZGhg\"}"
+    },
+    {
+      "file_id": "1U9IwYovwcDsy0CDF1DGlLL2qnWhwYRiM",
+      "name": "Talho - Precontrato (3).pdf",
+      "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CdHGfvUDtmdhNJKeJ1RD9\"}"
+    }
+  ]
+}
