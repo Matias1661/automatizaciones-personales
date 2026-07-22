@@ -158,7 +158,8 @@ def extraer_datos_documento(file_bytes, mime_type):
         },
         timeout=120,
     )
-    resp.raise_for_status()
+    if not resp.ok:
+        raise RuntimeError(f"Anthropic API {resp.status_code}: {resp.text[:500]}")
     data = resp.json()
     text = "".join(b["text"] for b in data["content"] if b["type"] == "text")
     text = re.sub(r"^```(json)?|```$", "", text.strip(), flags=re.MULTILINE).strip()
@@ -181,7 +182,8 @@ def crear_documento_notion(titulo, resumen, fecha, drive_file_id):
     }
     resp = requests.post("https://api.notion.com/v1/pages", headers=NOTION_HEADERS,
                           json=payload, timeout=30)
-    resp.raise_for_status()
+    if not resp.ok:
+        raise RuntimeError(f"Notion API {resp.status_code}: {resp.text[:500]}")
 
 
 def load_state():
