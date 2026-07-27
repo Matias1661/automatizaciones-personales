@@ -204,6 +204,25 @@ def crear_documento_notion(titulo, resumen, fecha, drive_file_id):
         raise RuntimeError(f"Notion API {resp.status_code}: {resp.text[:500]}")
 
 
+def ya_existe_en_notion(drive_file_id):
+    """Chequea si ya hay una pagina en la DB Documentos con el Link de este
+    archivo. Necesario porque la DB tenia entradas previas (de antes de este
+    proyecto) que no estaban registradas en processed_documentos_importantes.json,
+    lo que causo paginas duplicadas la primera vez que corrio este script
+    (ver docs/DECISIONS.md, entrada del 27/07/2026)."""
+    archivo_url = f"https://drive.google.com/file/d/{drive_file_id}/view"
+    payload = {
+        "filter": {"property": "Link", "url": {"equals": archivo_url}},
+        "page_size": 1,
+    }
+    resp = requests.post(
+        f"https://api.notion.com/v1/data_sources/{DOCUMENTOS_DS_ID}/query",
+        headers=NOTION_HEADERS, json=payload, timeout=30)
+    if not resp.ok:
+        raise RuntimeError(f"Notion API {resp.status_code}: {resp.text[:500]}")
+    return len(resp.json().get("results", [])) > 0
+
+
 def load_state():
     if os.path.exists(STATE_FILE):
         with open(STATE_FILE, "r", encoding="utf-8") as f:
@@ -247,6 +266,14 @@ if __name__ == "__main__":
         resultados = {}  # file_id -> dict de requiere_revision, o None si se resolvio
         for f in new_files:
             print(f"Procesando {f['name']} ({f['id']}, {f['mimeType']})...")
+
+            if ya_existe_en_notion(f["id"]):
+                print("  Ya existe una pagina en Notion para este archivo (entrada previa "
+                      "a este script). Se omite para no duplicar.")
+                processed_ids.add(f["id"])
+                resultados[f["id"]] = None
+                continue
+
             try:
                 file_bytes = download_file(drive_token, f["id"])
                 datos = extraer_datos_documento(file_bytes, f["mimeType"])
