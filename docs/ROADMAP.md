@@ -11,6 +11,9 @@
       `retryable` en el script, ver `docs/DECISIONS.md`).
 - [ ] Cargar a mano en Notion los 6 PDFs inválidos que quedan en
       `requiere_revision` (`processed_documentos_importantes.json`).
+- [ ] Borrar en Notion las 56 páginas duplicadas marcadas con
+      "🗑️ DUPLICADO - BORRAR - " (vista "Duplicados a borrar" en la DB
+      Documentos) — el conector no permite borrarlas automáticamente.
 
 ## Futuro
 - [ ] Evaluar migrar "Articulos Holy Death" (scraper semanal de
