@@ -61,6 +61,24 @@ NOTION_HEADERS = {
 
 FECHA_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
+# Marcadores de errores transitorios: si el mensaje de error contiene alguno
+# de estos, se considera "reintentable" (se vuelve a intentar solo en la
+# proxima corrida, sin intervencion manual). Cualquier otro error (ej. PDF
+# invalido, tipo de archivo no soportado, extraccion incompleta) se considera
+# NO reintentable y requiere carga manual en Notion.
+ERRORES_REINTENTABLES = (
+    "credit balance is too low",
+    "insufficient_quota",
+    "rate_limit_error",
+    "overloaded_error",
+    "429",
+)
+
+
+def es_error_reintentable(error_msg):
+    msg = (error_msg or "").lower()
+    return any(marca in msg for marca in ERRORES_REINTENTABLES)
+
 EXTRACCION_PROMPT = """Analiza el documento adjunto y devolve tres datos:
 
 1. titulo: una descripcion de hasta 5 palabras en español (no una oracion completa, solo las palabras clave que identifican el documento).
@@ -202,21 +220,31 @@ def save_state(state):
 
 if __name__ == "__main__":
     state = load_state()
+
+    # Compatibilidad con entradas viejas de requiere_revision que no tienen
+    # el campo "retryable" todavia: se clasifican con la misma heuristica.
+    for r in state["requiere_revision"]:
+        r.setdefault("retryable", es_error_reintentable(r.get("error", "")))
+
     processed_ids = set(state["processed_file_ids"])
-    ya_flaggeados = {r["file_id"] for r in state["requiere_revision"]}
-    revision_nueva = []
+    # Solo los NO reintentables (ej. PDF invalido) bloquean el archivo para
+    # siempre. Los reintentables (ej. bloqueo de credito) vuelven a aparecer
+    # como "nuevos" en cada corrida hasta que se resuelvan.
+    no_reintentables = {r["file_id"] for r in state["requiere_revision"]
+                         if not r["retryable"]}
 
     print("Autenticando con Google Drive (cuenta de servicio)...")
     drive_token = get_drive_access_token()
 
     print("Buscando documentos nuevos en Drive...")
     new_files = [f for f in list_new_files(drive_token, processed_ids)
-                 if f["id"] not in ya_flaggeados]
-    print(f"  {len(new_files)} archivo(s) nuevo(s)")
+                 if f["id"] not in no_reintentables]
+    print(f"  {len(new_files)} archivo(s) nuevo(s) o pendiente(s) de reintento")
 
     if not new_files:
         print("Nada que procesar.")
     else:
+        resultados = {}  # file_id -> dict de requiere_revision, o None si se resolvio
         for f in new_files:
             print(f"Procesando {f['name']} ({f['id']}, {f['mimeType']})...")
             try:
@@ -233,17 +261,34 @@ if __name__ == "__main__":
                 crear_documento_notion(titulo, resumen, fecha, f["id"])
                 print("  Creado en Notion.")
                 processed_ids.add(f["id"])
+                resultados[f["id"]] = None
 
             except Exception as e:
-                print(f"  ::warning::No se pudo procesar {f['name']} ({f['id']}): {e}")
-                revision_nueva.append({
-                    "file_id": f["id"], "name": f["name"], "error": str(e)
-                })
+                error_msg = str(e)
+                retryable = es_error_reintentable(error_msg)
+                print(f"  ::warning::No se pudo procesar {f['name']} ({f['id']}): {error_msg}")
+                resultados[f["id"]] = {
+                    "file_id": f["id"], "name": f["name"],
+                    "error": error_msg, "retryable": retryable,
+                }
+
+        # Reconstruir requiere_revision: sacar las entradas de archivos que
+        # se tocaron en esta corrida (se resolvieron o se reintentaron) y
+        # agregar los resultados nuevos, para no duplicar entradas.
+        revision_restante = [r for r in state["requiere_revision"]
+                              if r["file_id"] not in resultados]
+        revision_nueva = [r for r in resultados.values() if r is not None]
 
         state["processed_file_ids"] = sorted(processed_ids)
-        state["requiere_revision"] = state["requiere_revision"] + revision_nueva
+        state["requiere_revision"] = revision_restante + revision_nueva
         save_state(state)
         print("processed_documentos_importantes.json actualizado.")
-        if revision_nueva:
-            print(f"::warning::{len(revision_nueva)} documento(s) necesitan revision manual "
+
+        manuales = [r for r in revision_nueva if not r["retryable"]]
+        reintentables = [r for r in revision_nueva if r["retryable"]]
+        if manuales:
+            print(f"::warning::{len(manuales)} documento(s) requieren carga manual "
                   f"(ver 'requiere_revision' en {STATE_FILE}).")
+        if reintentables:
+            print(f"::warning::{len(reintentables)} documento(s) fallaron de nuevo "
+                  f"pero son reintentables (se probaran en la proxima corrida).")
