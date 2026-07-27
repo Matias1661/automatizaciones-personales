@@ -1,3 +1,18 @@
+## 2026-07-27 — Fix: DB Documentos duplicada (124 páginas para 68 archivos)
+
+- Causa: un proceso previo a este proyecto (24/04–29/05/2026, no
+  documentado) ya había creado una página en Notion por cada archivo de
+  Drive. El script dedupeaba solo contra el JSON local, así que volvió a
+  crear una página para los 56 archivos que procesó con éxito.
+- Fix: `ya_existe_en_notion()` consulta la DB Documentos por `Link` antes
+  de crear una página — la DB de Notion pasa a ser también fuente de
+  verdad para deduplicar, no solo el JSON.
+- Limpieza: las 56 páginas duplicadas (las previas al script) se
+  renombraron con "🗑️ DUPLICADO - BORRAR - " y se creó la vista "Duplicados
+  a borrar" en la DB para borrarlas manualmente (el conector de Notion no
+  permite borrar páginas). Pendiente: Matías tiene que borrarlas desde esa
+  vista.
+
 ## 2026-07-27 — Fix: reintento automático de fallos por crédito
 
 - `scripts/process_documentos_importantes.py`: las entradas de
