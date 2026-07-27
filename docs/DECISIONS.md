@@ -1,3 +1,42 @@
+## [2026-07-27] Fix: DB Documentos duplicada — dedupe contra Notion, no solo contra el JSON local
+
+**Contexto:** Matías notó que la página de Notion "Documentos" tenía 124
+entradas para 68 archivos en Drive — no era un espejo exacto de la carpeta.
+
+**Hallazgo:** el 24/04/2026 (y en fechas posteriores, coincidiendo con cada
+subida de archivo nuevo hasta el 29/05/2026), un proceso no documentado y
+anterior a este proyecto ya había creado una página en Notion por cada
+archivo de la carpeta "Documentos importantes". No hay rastro de este
+proceso en `docs/`. Cuando este script empezó a correr (22/07/2026),
+dedupeaba únicamente contra `processed_documentos_importantes.json` —que
+no tenía ningún registro de esas páginas previas—, así que volvió a crear
+una página para cada archivo que logró procesar. Resultado: 56 archivos
+quedaron con 2 páginas (la previa + la del script), 6 (los PDFs inválidos)
+quedaron con 1 sola página (la previa, ya que el script nunca llegó a
+crearles una), y 6 archivos subidos más tarde (sin página previa) quedaron
+con 1 sola página (la del script). 62 + 62 duplicados − 6 sin duplicar = 124.
+
+**Decisión:** mantener las páginas creadas por este script (trazables en
+`processed_documentos_importantes.json`) y descartar las 56 previas
+duplicadas. Como el conector de Notion disponible no permite borrar/archivar
+páginas, se renombraron las 56 con el prefijo "🗑️ DUPLICADO - BORRAR - " y
+se creó una vista de tabla "Duplicados a borrar" (filtro: Nombre contiene
+"DUPLICADO - BORRAR") en la DB Documentos, para que Matías las seleccione
+todas y las borre manualmente en un solo paso desde la UI de Notion.
+
+**Fix de fondo:** se agregó `ya_existe_en_notion()` en
+`scripts/process_documentos_importantes.py`, que consulta la DB Documentos
+por `Link` antes de crear una página nueva (vía `POST
+/v1/data_sources/{id}/query`). Si ya existe una página con ese link, el
+archivo se marca como procesado sin crear duplicado ni gastar una llamada a
+Claude. Esto cubre tanto páginas creadas por este script en corridas
+previas como cualquier página preexistente de otro origen — la DB de
+Notion pasa a ser la fuente de verdad para deduplicar, no solo el JSON
+local.
+
+**Pendiente de acción manual del usuario:** abrir la vista "Duplicados a
+borrar" en la DB Documentos, seleccionar todas las filas y borrarlas.
+
 ## [2026-07-27] Fix: reintento automático de fallos por crédito en Documentos importantes
 
 **Contexto:** al resolverse el bloqueo de crédito de Anthropic (ver entrada
