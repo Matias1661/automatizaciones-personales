@@ -30,9 +30,11 @@
     "1Qgs389eGxuENgTpEULfg6Gyc-wwgU-_Z",
     "1RKf_kvwv1yVGZCF1CeOP6SGlwr5JTzeQ",
     "1S-BOJs6qc7GszV9lUahGg42k0Oy_AUKO",
+    "1SEs8GP3ph9IkJMTbZrTrPpeBkdUu_yrG",
     "1U9IwYovwcDsy0CDF1DGlLL2qnWhwYRiM",
     "1VNm3W9nFUnvdXLdwwtwih02dL0A2_UKB",
     "1VhrmzIMlyes5BVugDjRBoIq-Wpna0NJF",
+    "1XZmrTPvStLhxhHkEHJZ-GHxIdKoejp-I",
     "1XrhsiQUUBYCRUKbdfpJMKj2tpUnWL8eU",
     "1YWtO4QPAqCeSmpcmlChcMcv2Qt4ig_Ky",
     "1Z1QNwfeM-47AmW2SNMdBVy2a8cwaJdw8",
@@ -62,6 +64,7 @@
     "1p7vCW0RastT4P0RB6XXRkCgjcRSuX8Dd",
     "1pwctOj129awZa0bQNldft0C0oSzuLgqo",
     "1qAQwmlSgKkvLc2qseC4JdHrJsfADVRZn",
+    "1rJ40pkFb7XGK2TQMoQbJRgf1F0OJuGts",
     "1ri1lXct2wZJ2FiboWXMQvTuD84n39EgE",
     "1sXKa-K3t7hyWt3ucewcJjbsWblMZC6F3",
     "1uA2LO1TOc_zN1YeJbmiYnykq5gL_L4MK",
@@ -108,6 +111,12 @@
       "file_id": "1GVkz3Nnvp2cZVtVuD0J6Ybi46iYjTToc",
       "name": "20260000106344257222791.pdf",
       "error": "Anthropic API 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.0.content.0.pdf.source.base64.data: The PDF specified was not valid.\"},\"request_id\":\"req_011CdHGTsNrDqVWRLDv7ZFCD\"}",
+      "retryable": false
+    },
+    {
+      "file_id": "1-7tmcbHK-xGRJRtmblfy1hCWVyA56Vm9",
+      "name": "F.60-ficha_colaborador.docx",
+      "error": "tipo de archivo no soportado para extraccion: application/vnd.openxmlformats-officedocument.wordprocessingml.document",
       "retryable": false
     }
   ]
